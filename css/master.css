@@ -4,6 +4,35 @@
 body {
   font-family: "Open Sans", sans-serif;
 }
+.settings-box {
+  position: fixed;
+  z-index: 1000;
+  width: 200px;
+  height: 100vh;
+  background-color: white;
+  text-align: center;
+  left: -200px;
+  transition: 0.3s ease-out;
+}
+.settings-box.open {
+  left: 0px;
+}
+.settings-box .gear-cont {
+  background-color: white;
+  position: absolute;
+  right: -30px;
+  top: 200px;
+  text-align: center;
+  border-radius: 0px 5px 5px 0px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.settings-box .gear-cont i {
+  width: 30px;
+  padding: 10px 0px;
+}
+.settings-box .settings-cont {
+}
 .landing-page {
   min-height: 100vh;
   width: 100%;
