@@ -31,7 +31,43 @@ body {
   width: 30px;
   padding: 10px 0px;
 }
-.settings-box .settings-cont {
+.settings-box .settings-cont h4 {
+  text-transform: capitalize;
+  text-align: center;
+  font-size: 20px;
+}
+.settings-box .settings-cont .colors-list {
+  list-style: none;
+  text-align: center;
+  margin: auto;
+  padding: 0;
+}
+.settings-box .settings-cont .colors-list li {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  display: inline-block;
+  border-radius: 50%;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.settings-box .settings-cont .colors-list li.active {
+  opacity: 1;
+}
+.settings-box .settings-cont .colors-list li:first-child {
+  background-color: #2bd4c7;
+}
+.settings-box .settings-cont .colors-list li:nth-child(2) {
+  background-color: #e91e63;
+}
+.settings-box .settings-cont .colors-list li:nth-child(3) {
+  background-color: #9c27b0;
+}
+.settings-box .settings-cont .colors-list li:nth-child(4) {
+  background-color: #3f51b5;
+}
+.settings-box .settings-cont .colors-list li:nth-child(5) {
+  background-color: #ffeb3b;
 }
 .landing-page {
   min-height: 100vh;
@@ -78,7 +114,7 @@ body {
   transition: 0.3s ease;
 }
 .landing-page header ul li a:hover {
-  color: #2bd4c7;
+  color: var(--main--color);
 }
 .landing-page .land-text {
   text-transform: capitalize;
