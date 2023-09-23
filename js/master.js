@@ -1,3 +1,12 @@
+let mainColor = localStorage.getItem("color_option");
+
+if (mainColor !== null) {
+  document.documentElement.style.setProperty(
+    "--main--color",
+    localStorage.getItem("color_option")
+  );
+}
+
 let settings = document.querySelector(".settings-box");
 let gear = document.querySelector(".fa-gear");
 
@@ -14,6 +23,11 @@ colorsLi.forEach((li) => {
       "--main--color",
       e.target.dataset.color
     );
+    localStorage.setItem("color_option", e.target.dataset.color);
+    e.target.parentElement.querySelectorAll(".active").forEach((element) => {
+      element.classList.remove("active");
+    });
+    e.target.classList.add("active");
   });
 });
 
