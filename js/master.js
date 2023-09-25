@@ -5,6 +5,14 @@ if (mainColor !== null) {
     "--main--color",
     localStorage.getItem("color_option")
   );
+
+  document.querySelectorAll(".colors-list li").forEach((element) => {
+    element.classList.remove("active");
+
+    if (element.dataset.color === mainColor) {
+      element.classList.add("active");
+    }
+  });
 }
 
 let settings = document.querySelector(".settings-box");

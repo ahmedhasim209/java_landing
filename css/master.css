@@ -31,10 +31,16 @@ body {
   width: 30px;
   padding: 10px 0px;
 }
+.settings-box .settings-cont {
+  background-color: #eee;
+  padding: 10px;
+  margin: 10px;
+}
 .settings-box .settings-cont h4 {
   text-transform: capitalize;
   text-align: center;
   font-size: 20px;
+  margin: 0 0 10px 0;
 }
 .settings-box .settings-cont .colors-list {
   list-style: none;
