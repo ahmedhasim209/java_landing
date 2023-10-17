@@ -4,6 +4,7 @@
 body {
   font-family: "Open Sans", sans-serif;
 }
+/*start settings box*/
 .settings-box {
   position: fixed;
   z-index: 1000;
@@ -75,6 +76,25 @@ body {
 .settings-box .settings-cont .colors-list li:nth-child(5) {
   background-color: #ffeb3b;
 }
+.settings-box .settings-cont .option-box .random-background span {
+  margin-top: 10px;
+  background-color: #009688;
+  width: 50px;
+  padding: 4px 10px;
+  color: white;
+  display: inline-block;
+  font-size: 12px;
+  border-radius: 7px;
+  font-weight: bold;
+  text-transform: capitalize;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.settings-box .settings-cont .option-box .random-background span.active {
+  opacity: 1;
+}
+/*end settings box*/
+/* start landing page */
 .landing-page {
   min-height: 100vh;
   width: 100%;
@@ -144,3 +164,4 @@ body {
   line-height: 1.6;
   font-size: 20px;
 }
+/* end landing page */
