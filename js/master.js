@@ -15,6 +15,12 @@ if (mainColor !== null) {
   });
 }
 
+// random back ground option
+let backGroundOption = true;
+
+// varible to control Interval
+let backgroundInterval;
+
 let settings = document.querySelector(".settings-box");
 let gear = document.querySelector(".fa-gear");
 
@@ -51,12 +57,28 @@ randomBackEl.forEach((span) => {
     });
     //add active class on self
     e.target.classList.add("active");
+
+    if (e.target.dataset.background === "yes") {
+      backGroundOption = true;
+      randomizeImgs();
+    } else {
+      backGroundOption = false;
+      clearInterval(backgroundInterval);
+    }
   });
 });
 
 let land = document.querySelector(".landing-page");
 let imgArray = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"];
-setInterval(function () {
-  let randomNumber = Math.floor(Math.random() * imgArray.length);
-  land.style.backgroundImage = 'url("images/' + imgArray[randomNumber] + '")';
-}, 5000);
+
+// function to randomize images
+function randomizeImgs() {
+  if (backGroundOption === true) {
+    backgroundInterval = setInterval(function () {
+      let randomNumber = Math.floor(Math.random() * imgArray.length);
+      land.style.backgroundImage =
+        'url("images/' + imgArray[randomNumber] + '")';
+    }, 1000);
+  }
+}
+randomizeImgs();
