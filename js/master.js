@@ -39,6 +39,21 @@ colorsLi.forEach((li) => {
   });
 });
 
+//swith random background option
+const randomBackEl = document.querySelectorAll(".random-background span");
+
+//loop on all spans
+randomBackEl.forEach((span) => {
+  span.addEventListener("click", (e) => {
+    //remove active class from all spans
+    e.target.parentElement.querySelectorAll(".active").forEach((element) => {
+      element.classList.remove("active");
+    });
+    //add active class on self
+    e.target.classList.add("active");
+  });
+});
+
 let land = document.querySelector(".landing-page");
 let imgArray = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"];
 setInterval(function () {
