@@ -171,3 +171,33 @@ body {
   font-size: 20px;
 }
 /* end landing page */
+/* start about us */
+.cont .about-us {
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-transform: capitalize;
+  justify-content: center;
+  align-items: center;
+}
+.cont .about-us .info-box {
+  flex: 1;
+}
+.cont .about-us .info-box h2 {
+  font-weight: bold;
+  font-size: 35px;
+  margin: 0 0 10px 0;
+  color: var(--main--color);
+}
+.cont .about-us .info-box p {
+  line-height: 1.8;
+  color: #767676;
+}
+.cont .about-us .image-box {
+  flex: 1;
+  text-align: center;
+}
+.cont .about-us .image-box img {
+  width: 300px;
+}
+/* end about us */
