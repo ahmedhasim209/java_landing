@@ -4,6 +4,12 @@
 body {
   font-family: "Open Sans", sans-serif;
 }
+.cont {
+  width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+}
 /*start settings box*/
 .settings-box {
   position: fixed;
