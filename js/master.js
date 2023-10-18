@@ -21,6 +21,28 @@ let backGroundOption = true;
 // varible to control Interval
 let backgroundInterval;
 
+//check if there is local storage random background item
+let backgroundLocalItem = localStorage.getItem("background_option");
+//check if random background is not empty
+if (backgroundLocalItem !== null) {
+  console.log(backgroundLocalItem);
+
+  if (backgroundLocalItem === "true") {
+    backGroundOption = true;
+  } else {
+    backGroundOption = false;
+  }
+  // remove active class from all spans
+  document.querySelectorAll(".random-background span").forEach((element) => {
+    element.classList.remove("active");
+  });
+  if (backgroundLocalItem === "true") {
+    document.querySelector(".random-background .yes").classList.add("active");
+  } else {
+    document.querySelector(".random-background .no").classList.add("active");
+  }
+}
+
 let settings = document.querySelector(".settings-box");
 let gear = document.querySelector(".fa-gear");
 
@@ -61,9 +83,11 @@ randomBackEl.forEach((span) => {
     if (e.target.dataset.background === "yes") {
       backGroundOption = true;
       randomizeImgs();
+      localStorage.setItem("background_option", true);
     } else {
       backGroundOption = false;
       clearInterval(backgroundInterval);
+      localStorage.setItem("background_option", false);
     }
   });
 });
