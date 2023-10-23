@@ -132,3 +132,19 @@ window.onscroll = () => {
     });
   }
 };
+
+//create popup with image
+let ourGalary = document.querySelectorAll(".galary img");
+
+ourGalary.forEach((img) => {
+  img.addEventListener("click", (e) => {
+    // creatr overlay div
+    let overLay = document.createElement("div");
+
+    // add class to overLay div
+    overLay.className = "popup-overlay";
+
+    //add overlay to the body
+    document.body.appendChild(overLay);
+  });
+});
