@@ -146,5 +146,23 @@ ourGalary.forEach((img) => {
 
     //add overlay to the body
     document.body.appendChild(overLay);
+
+    // create the popupBox
+    popupBox = document.createElement("div");
+
+    //add class to popupBox div
+    popupBox.className = "popup-box";
+
+    // create the clicked img
+    let popupImage = document.createElement("img");
+
+    // change popupImage src to orginal img src
+    popupImage.src = img.src;
+
+    // append the popupImage to popupBox
+    popupBox.appendChild(popupImage);
+
+    // append the popupBox to the body
+    document.body.appendChild(popupBox);
   });
 });
