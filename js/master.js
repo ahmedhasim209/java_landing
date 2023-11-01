@@ -206,3 +206,14 @@ document.addEventListener("click", (e) => {
     document.querySelector(".popup-overlay").remove();
   }
 });
+
+//select all bullets
+let allBullets = document.querySelectorAll(".nav-bullets .bullet");
+
+allBullets.forEach((bullet) => {
+  bullet.addEventListener("click", (e) => {
+    document.querySelector(e.target.dataset.section).scrollIntoView({
+      behavior: "smooth",
+    });
+  });
+});
