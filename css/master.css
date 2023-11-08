@@ -81,11 +81,11 @@ body {
   background-color: #3f51b5;
 }
 .settings-box .settings-cont .colors-list li:nth-child(5) {
-  background-color: #ffeb3b;
+  background-color: #fa9e00;
 }
-.settings-box .settings-cont .option-box .random-background span {
+.settings-box .settings-cont .option-box span {
   margin-top: 10px;
-  background-color: #009688;
+  background-color: var(--main--color);
   width: 50px;
   padding: 4px 10px;
   color: white;
@@ -97,7 +97,7 @@ body {
   opacity: 0.5;
   cursor: pointer;
 }
-.settings-box .settings-cont .option-box .random-background span.active {
+.settings-box .settings-cont .option-box span.active {
   opacity: 1;
 }
 /*end settings box*/
