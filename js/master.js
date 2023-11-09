@@ -230,12 +230,29 @@ let bulletsSpan = document.querySelectorAll(".bullets-option span");
 
 let bulletsCont = document.querySelector(".nav-bullets");
 
+let bulletLocalItem = localStorage.getItem("bullets-option");
+
+if (bulletLocalItem !== null) {
+  bulletsSpan.forEach((span) => {
+    span.classList.remove("active");
+  });
+}
+if (bulletLocalItem === "block") {
+  bulletsCont.style.display = "block";
+  document.querySelector(".bullets-option .yes").classList.add("active");
+} else {
+  bulletsCont.style.display = "none";
+  document.querySelector(".bullets-option .no").classList.add("active");
+}
+
 bulletsSpan.forEach((span) => {
   span.addEventListener("click", (e) => {
     if (span.dataset.display === "block") {
       bulletsCont.style.display = "block";
+      localStorage.setItem("bullets-option", "block");
     } else {
       bulletsCont.style.display = "none";
+      localStorage.setItem("bullets-option", "none");
     }
     handleActive(e);
   });
