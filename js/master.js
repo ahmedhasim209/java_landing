@@ -225,3 +225,18 @@ function handleActive(ele) {
   });
   ele.target.classList.add("active");
 }
+
+let bulletsSpan = document.querySelectorAll(".bullets-option span");
+
+let bulletsCont = document.querySelector(".nav-bullets");
+
+bulletsSpan.forEach((span) => {
+  span.addEventListener("click", (e) => {
+    if (span.dataset.display === "block") {
+      bulletsCont.style.display = "block";
+    } else {
+      bulletsCont.style.display = "none";
+    }
+    handleActive(e);
+  });
+});
