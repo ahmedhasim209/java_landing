@@ -1,4 +1,4 @@
-# special Design
+# Special Design
 
 This project is a website for media Agency. I implemented this project to enhance my skills in JavaScript, and it serves as my first complete application in this programming language
 
