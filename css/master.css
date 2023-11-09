@@ -830,6 +830,16 @@ body {
   }
 }
 /* end contact us */
+/* start footer */
+footer {
+  background-color: #042024;
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+  text-transform: capitalize;
+}
+/* end footer */
 /* start grid system */
 @media (min-width: 576px) {
   /* small screens => mobiles */
