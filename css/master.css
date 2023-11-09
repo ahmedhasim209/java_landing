@@ -714,6 +714,27 @@ body {
   font-weight: bold;
   margin: 0;
 }
+@media (max-width: 991px) {
+  .Testimonials .cont .ts-box {
+    width: calc(81% / 3);
+  }
+  .Testimonials .cont .ts-box .person-info {
+    text-align: center;
+  }
+  .Testimonials .cont .ts-box .person-info img {
+    float: none;
+    margin-right: 0;
+  }
+}
+@media (max-width: 767px) {
+  .Testimonials .cont .ts-box {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+  .Testimonials .cont h2 {
+    text-align: center;
+  }
+}
 /* end Testimonials */
 /* start contact us */
 .contact {
@@ -766,7 +787,6 @@ body {
 .contact form input:not([type="submit"]),
 .contact form textarea {
   background-color: rgb(218, 218, 218, 0.19);
-  /* width: 100%; */
   margin-bottom: 15px;
   padding: 10px;
   border: 1px solid #ccc;
@@ -794,6 +814,20 @@ body {
 .contact form textarea:focus::placeholder {
   opacity: 0;
   transition: 0.3s;
+}
+@media (max-width: 767px) {
+  .contact form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+  }
+  .contact form .left,
+  .contact form .right {
+    width: 100%;
+  }
 }
 /* end contact us */
 /* start grid system */
