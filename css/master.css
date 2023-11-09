@@ -5,7 +5,6 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 .cont {
-  width: 1170px;
   padding-left: 15px;
   padding-right: 15px;
   margin: auto;
@@ -192,6 +191,12 @@ body {
   font-size: 25px;
   cursor: pointer;
 }
+.landing-page header .icons {
+  font-size: 25px;
+  width: 30px;
+  display: none;
+  cursor: pointer;
+}
 .landing-page header ul {
   list-style-type: none;
   display: flex;
@@ -228,6 +233,14 @@ body {
   margin: 0;
   line-height: 1.6;
   font-size: 20px;
+}
+@media (max-width: 991px) {
+  .landing-page header .links {
+    display: none;
+  }
+  .landing-page header .icons {
+    display: block;
+  }
 }
 /* end landing page */
 /* start about us */
