@@ -100,6 +100,17 @@ body {
 .settings-box .settings-cont .option-box span.active {
   opacity: 1;
 }
+.settings-box .reset-options {
+  background-color: #f44336;
+  border: none;
+  color: white;
+  padding: 10px;
+  width: 180px;
+  border-radius: 4px;
+  text-transform: capitalize;
+  font-weight: bold;
+  cursor: pointer;
+}
 /*end settings box*/
 /* start nav bullets */
 .nav-bullets {
