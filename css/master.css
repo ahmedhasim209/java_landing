@@ -197,6 +197,18 @@ body {
   display: none;
   cursor: pointer;
 }
+.landing-page header .icons .burger {
+  position: relative;
+}
+.landing-page header .icons .burger::after {
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+  position: absolute;
+  top: 20px;
+  right: 1px;
+}
 .landing-page header ul {
   list-style-type: none;
   display: flex;
@@ -240,6 +252,24 @@ body {
   }
   .landing-page header .icons {
     display: block;
+  }
+  .landing-page header .links.open {
+    display: block;
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    top: 35px;
+    left: 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: left;
+  }
+  .landing-page header .links.open li {
+    margin-bottom: 5px;
+  }
+  .landing-page header .links.open li a {
+    color: var(--main--color);
   }
 }
 /* end landing page */
