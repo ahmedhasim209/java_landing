@@ -268,3 +268,36 @@ document.querySelector(".reset-options").onclick = function () {
   // reload window
   window.location.reload();
 };
+
+// toggle menu
+
+let toggleIcon = document.querySelector(".burger");
+let tLinks = document.querySelector(".links");
+
+toggleIcon.onclick = function (e) {
+  // stop propagation
+  e.stopPropagation();
+
+  // toggle class (menu-active) on toggle icon
+  this.classList.toggle("menu-active");
+
+  // toggle class (open) on links
+  tLinks.classList.toggle("open");
+};
+
+document.addEventListener("click", (e) => {
+  if (e.target !== toggleIcon && e.target !== tLinks) {
+    if (tLinks.classList.contains("open")) {
+      // toggle class (menu-active) on toggle icon
+      toggleIcon.classList.toggle("menu-active");
+
+      // toggle class (open) on links
+      tLinks.classList.toggle("open");
+    }
+  }
+});
+
+tLinks.onclick = function (e) {
+  // stop propagation
+  e.stopPropagation();
+};

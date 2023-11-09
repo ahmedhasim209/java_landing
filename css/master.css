@@ -200,7 +200,7 @@ body {
 .landing-page header .icons .burger {
   position: relative;
 }
-.landing-page header .icons .burger::after {
+.landing-page header .icons .burger.menu-active::after {
   content: "";
   border-width: 10px;
   border-style: solid;
