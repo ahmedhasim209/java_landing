@@ -678,3 +678,29 @@ body {
   transition: 0.3s;
 }
 /* end contact us */
+/* start grid system */
+@media (min-width: 576px) {
+  /* small screens => mobiles */
+  .cont {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  /* medium screens => tablets */
+  .cont {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  /* desktops */
+  .cont {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  /* large screens */
+  .cont {
+    max-width: 1140px;
+  }
+}
+/* end grid system */
