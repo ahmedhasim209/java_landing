@@ -585,6 +585,16 @@ body {
     display: none;
   }
 }
+@media (min-width: 768px) {
+  .timeline .timeline-content .left .content {
+    left: -554px;
+    transition: ease 0.5s;
+  }
+  .timeline .timeline-content .right .content {
+    left: 554px;
+    transition: ease 0.5s;
+  }
+}
 /* end timeline */
 /* start Feature */
 .features {

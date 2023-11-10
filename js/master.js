@@ -101,26 +101,47 @@ randomizeImgs();
 
 // skills sellector
 let ourSkills = document.querySelector(".skills");
+// select timeline
+let timeLine = document.querySelector(".timeline");
 
 window.onscroll = () => {
   //skills offSet top
-  let skillsOffsetTop = ourSkills.offsetTop;
+  let skillsOffsetTop = ourSkills.offsetTop; // distance from ourSkills to page = 1110
 
   //skills outer height
-  let skillsOuterHeight = ourSkills.offsetHeight;
+  let skillsOuterHeight = ourSkills.offsetHeight; // time ourSkills = 565
 
+  //timeLine offSet top
+  let timeLineOffsetTop = timeLine.offsetTop; // distance from time line to page = 2266
+
+  //timeLine outer height
+  let timeLineOuterHeight = timeLine.offsetHeight; // time line height = 1422
   //window height
-  let windowHeight = this.innerHeight;
+  let windowHeight = this.innerHeight; //height of the page = 707
 
   // window scroll top
-  let windowScrollTop = this.pageYOffset;
-
+  let windowScrollTop = this.pageYOffset; //height of the scroll = 2266
   if (windowScrollTop > skillsOffsetTop + skillsOuterHeight - windowHeight) {
+    console.log("we");
     let allSkills = document.querySelectorAll(
       ".skills .skill-box .skill-progress span"
     );
     allSkills.forEach((skill) => {
       skill.style.width = skill.dataset.progress;
+    });
+  }
+  if (windowScrollTop > timeLineOffsetTop) {
+    let timeLineLeftCont = document.querySelectorAll(
+      ".timeline .timeline-content .left .content"
+    );
+    let timeLineRightCont = document.querySelectorAll(
+      ".timeline .timeline-content .right .content"
+    );
+    timeLineLeftCont.forEach((content) => {
+      content.style.left = 0;
+    });
+    timeLineRightCont.forEach((content) => {
+      content.style.left = 0;
     });
   }
 };
@@ -301,3 +322,27 @@ tLinks.onclick = function (e) {
   // stop propagation
   e.stopPropagation();
 };
+
+// // select timeline
+// // let timeLine = document.querySelector(".timeline-content");
+
+// window.onscroll = () => {
+//   //timeLine offSet top
+//   let timeLineOffsetTop = timeLine.offsetTop;
+
+//   //timeLine outer height
+//   let timeLineOuterHeight = timeLine.offsetHeight;
+
+//   //window height
+//   let windowHeight = this.innerHeight;
+
+//   // window scroll top
+//   let windowScrollTop = this.pageYOffset;
+
+//   if (
+//     windowScrollTop >
+//     timeLineOffsetTop + timeLineOuterHeight - windowHeight
+//   ) {
+//     console.log("we fucked up");
+//   }
+// };
