@@ -322,27 +322,3 @@ tLinks.onclick = function (e) {
   // stop propagation
   e.stopPropagation();
 };
-
-// // select timeline
-// // let timeLine = document.querySelector(".timeline-content");
-
-// window.onscroll = () => {
-//   //timeLine offSet top
-//   let timeLineOffsetTop = timeLine.offsetTop;
-
-//   //timeLine outer height
-//   let timeLineOuterHeight = timeLine.offsetHeight;
-
-//   //window height
-//   let windowHeight = this.innerHeight;
-
-//   // window scroll top
-//   let windowScrollTop = this.pageYOffset;
-
-//   if (
-//     windowScrollTop >
-//     timeLineOffsetTop + timeLineOuterHeight - windowHeight
-//   ) {
-//     console.log("we fucked up");
-//   }
-// };
