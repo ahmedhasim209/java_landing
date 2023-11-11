@@ -125,7 +125,7 @@ body {
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 1000;
+  z-index: 1001;
 }
 .nav-bullets .bullet {
   width: 20px;
